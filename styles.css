@@ -1,0 +1,237 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  color: #ffffff;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Gradient Animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Particles */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0db4f;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero-content .highlight {
+  color: #f0db4f;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #f0db4f;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  background-color: #ffd700;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #8b0000; /* Dark Red in HEX */
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 18px 35px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  background-color: #25d366;
+}
+
+.whatsapp .icon {
+  font-size: 1.5rem;
+}
+
+/* TikTok Button */
+.tiktok {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+.tiktok .icon {
+  font-size: 1.5rem;
+}
+
+/* Facebook Button */
+.facebook {
+  background-color: #4267b2;
+}
+
+.facebook .icon {
+  font-size: 1.5rem;
+}
+
+/* Telegram Button */
+.telegram {
+  background-color: #0088cc;
+}
+
+.telegram .icon {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+  color: #cccccc;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #ffffff;
+  color: #0d1117;
+}
+
+body.dark-mode .navbar {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .cta-button {
+  background-color: #000;
+  color: #f0db4f;
+}
+
+body.dark-mode .btn {
+  color: #000;
+}
