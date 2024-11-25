@@ -1,4 +1,8 @@
-// Add this to the end of your existing script.js file
+// Dark Mode Toggle
+const toggleButton = document.getElementById('dark-mode-toggle');
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
 
 // Back to Top Button
 const backToTopButton = document.getElementById("back-to-top");
